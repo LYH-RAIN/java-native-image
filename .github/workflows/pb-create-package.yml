@@ -48,7 +48,7 @@ jobs:
             - if: ${{ false }}
               uses: actions/cache@v4
               with:
-                key: ${{ runner.os }}-go-${{ hashFiles('**/buildpack.toml', '**/package.toml') }}
+                key: ${{ runner.os }}-go-${{ hashFiles('**/project.toml', '**/package.toml') }}
                 path: |-
                     ${{ env.HOME }}/.pack
                     ${{ env.HOME }}/carton-cache
